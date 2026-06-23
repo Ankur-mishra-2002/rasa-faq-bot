@@ -1,0 +1,47 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - bot_challenger
+  - faq
+
+responses:
+  utter_greet:
+    - text: "Hello! I'm here to answer your questions. What would you like to know?"
+
+  utter_goodbye:
+    - text: "Goodbye! Feel free to come back if you have more questions."
+
+  utter_iamabot:
+    - text: "I'm an FAQ bot powered by Rasa, here to help answer your questions."
+
+  utter_default:
+    - text: "Sorry, I didn't quite understand that. Could you rephrase your question?"
+
+  utter_faq/what_is_rasa:
+    - text: "Rasa is an open-source framework for building conversational AI, including chatbots and voice assistants."
+
+  utter_faq/how_to_install:
+    - text: "You can install Rasa using pip: `pip install rasa`. Make sure you have Python 3.8-3.10 installed."
+
+  utter_faq/business_hours:
+    - text: "Our business hours are Monday to Friday, 9 AM to 6 PM."
+
+  utter_faq/contact_support:
+    - text: "You can contact our support team at support@example.com or call +1-800-555-0199."
+
+  utter_faq/pricing:
+    - text: "We offer flexible pricing plans starting at $19/month. Visit our pricing page for full details."
+
+  utter_faq/reset_password:
+    - text: "To reset your password, go to Settings > Security > Reset Password, and follow the instructions sent to your email."
+
+  utter_faq/refund_policy:
+    - text: "We offer a 30-day money-back guarantee on all our plans, no questions asked."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
